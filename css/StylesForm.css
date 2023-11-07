@@ -1,0 +1,17 @@
+#estados {
+    display: none; 
+  }
+
+  .custom-select {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .custom-select label {
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-select input[type="checkbox"] {
+    margin-right: 5px;
+  }
