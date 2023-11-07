@@ -7,7 +7,7 @@ try {
         $lugar = $_GET['lugar'];
 
         // Consulta SQL para seleccionar los elementos con el nombre del lugar
-        $sql = "SELECT nombre, imagen_url FROM LugaresInteres WHERE estados = :lugar";
+        $sql = "SELECT id, nombre, imagen_url FROM LugaresInteres WHERE estados = :lugar";
     
         // Preparar y ejecutar la consulta
         $stmt = $conexion->prepare($sql);
@@ -20,8 +20,15 @@ try {
         if (count($resultados) > 0) {
             echo "<h1>Resultados para $lugar</h1>";
             foreach ($resultados as $row) {
-                echo "<h2>Nombre: " . $row['nombre'] . "</h2>";
-                echo "<img src='" . $row['imagen_url'] . "' alt='Imagen del lugar'>";
+                $nombre = $row['nombre'];
+                $imagen_url = $row['imagen_url'];
+                $id = $row['id'];
+
+                // Agregar un enlace con el id del elemento
+                echo "<h2>Nombre: $nombre</h2>";
+                echo "<img src='$imagen_url' alt='Imagen del lugar'>"; 
+             echo "<a href='./detalles.php?id=$id'>Ver detalles</a>";
+
                 echo "<br>";
             }
         } else {
