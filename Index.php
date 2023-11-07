@@ -33,12 +33,20 @@
         </div>
         <a href="./Mostrar.php?lugar=Baja California Sur">Mostrar Más</a>
     </div>
+
     <div class="box-estado">
         <h2>Campeche</h2>
         <div class="box-img">
             <img src="" alt="">
         </div>
         <a href="./Mostrar.php?lugar=Campeche">Mostrar Más</a>
+    </div>
+    <div class="box-estado">
+        <h2>Quintana Roo</h2>
+        <div class="box-img">
+            <img src="" alt="">
+        </div>
+        <a href="./Mostrar.php?lugar=Quintana Roo">Mostrar Más</a>
     </div>
 
 

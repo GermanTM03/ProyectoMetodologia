@@ -27,8 +27,8 @@ try {
                 // Agregar un enlace con el id del elemento
                 echo "<h2>Nombre: $nombre</h2>";
                 echo "<img src='$imagen_url' alt='Imagen del lugar'>"; 
-             echo "<a href='./detalles.php?id=$id'>Ver detalles</a>";
 
+             echo "<a href='./detalles.php?id=$id'>Ver detalles</a>";
                 echo "<br>";
             }
         } else {
