@@ -1,6 +1,6 @@
 <?php
 try {
-    require_once('./includes/conexion.php');
+    require_once('../includes/conexion.php');
 
     // Obtener el valor del ID desde la URL
     if (isset($_GET['id'])) {
@@ -50,7 +50,7 @@ try {
 
         var mapa = new google.maps.Map(document.getElementById('map'), {
             center: coordenadas,
-            zoom: 12  // Puedes ajustar el nivel de zoom según tus preferencias
+            zoom: 20  // Puedes ajustar el nivel de zoom según tus preferencias
         });
 
         // Marcador en las coordenadas

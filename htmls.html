@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pagina.css">
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="./LOGOPAGE.png" type="image/x-icon">
+   
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/Darkseson12/Proyecto-R/main/pymenfinder.png" alt="Logo de la empresa">
+        </div>
+        <nav>
+            <ul>
+                <li class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 6l16 0" />
+                        <path d="M4 12l16 0" />
+                        <path d="M4 18l16 0" />
+                    </svg>
+                </li>
+                <li><a href="/iniciosecion.html">Eres una empresa?</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <!-- Sección principal -->
+    <section>
+        <!-- Contenedor del fondo y texto -->
+        <div class="fondoBuscador">
+            <img src="https://github.com/Darkseson12/Proyecto-R/blob/main/lakeisha-bennett-nf37cy51Bo8-unsplash.jpg?raw=true" alt="">
+            <div class="content">
+                <h1>Donde se encuentra de todo </h1>
+                <!-- Barra de búsqueda -->
+                <div class="search-bar">
+                    <input type="text" name="query" id="query" oninput="search()">
+                    <button href="./Index.html" >Buscar</button>
+                </div>
+                <div id="results-container"></div>
+
+            </div>
+
+            <form>
+                <input type="text" name="query" id="query" oninput="search()">
+                <span id="search-icon" class="search-icon">&#128269;</span>
+            </form>
+            
+            <div id="results-container"></div>
+
+        </div>
+    </section>
+
+    <script src="./JavaScript/funciones.js"></script>
+
+</body>
+
+</html>

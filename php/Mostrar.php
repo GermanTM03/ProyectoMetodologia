@@ -1,6 +1,6 @@
 <?php
 try {
-    require_once('./includes/conexion.php');
+    require_once('../includes/conexion.php');
 
     // Obtener el valor del lugar desde la URL
     if (isset($_GET['lugar'])) {
@@ -27,7 +27,6 @@ try {
                 // Agregar un enlace con el id del elemento
                 echo "<h2>Nombre: $nombre</h2>";
                 echo "<img src='$imagen_url' alt='Imagen del lugar'>"; 
-
              echo "<a href='./detalles.php?id=$id'>Ver detalles</a>";
                 echo "<br>";
             }
