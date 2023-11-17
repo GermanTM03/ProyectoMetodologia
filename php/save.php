@@ -17,7 +17,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Conexión a la base de datos (usando PDO)
         require_once('../includes/conexion.php'); // Asegúrate de incluir tu archivo de parámetros
 
-        // Consulta SQL para insertar datos en la tabla registro
+        // Verificar si el correo ya está registrado
+        $consulta = "SELECT * FROM registro WHERE correo_electronico = :email";
+        $stmtConsulta = $conexion->prepare($consulta);
+        $stmtConsulta->bindParam(':email', $email);
+        $stmtConsulta->execute();
+
+        if ($stmtConsulta->rowCount() > 0) {
+            echo "El correo electrónico ya está registrado.";
+            exit;
+        }
+
+        // Si el correo no está registrado, proceder con la inserción
         $sql = "INSERT INTO registro (nombre_comercial, correo_electronico, telefono, contrasena)         
         VALUES (:nombre, :email, :tel, :password)";
 
