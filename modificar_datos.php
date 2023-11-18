@@ -34,6 +34,8 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos de la Empresa</title>
     <link rel="stylesheet" href="./css/StylesForm.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXgHRpfbWc77RiiA9ns4Wgo5Ea2SDSR0E"></script>
+  <script src="./JavaScript/maps.js"></script>
 </head>
 <body>
     <h1>Formulario - Datos de la Empresa</h1>
@@ -60,6 +62,10 @@ try {
         <label for="imagen">Imagen</label>
         <input type="file" name="imagen" id="imagen"><br><br>
     
+        <input type="hidden" id="lat" name="latitud" readonly>
+<input type="hidden" id="lng" name="longitud" readonly>
+
+    
         <input type="submit" value="Enviar">
     </form>
 
@@ -68,5 +74,11 @@ try {
 <form action="./php/logout.php" method="POST">
     <input type="submit" name="cerrar_sesion" value="Cerrar Sesión">
 </form>
+
+<div id="map" style="height: 400px; width: 50%;"></div>
+
+  <button onclick="centerMapToUserLocation()">Mi Ubicación</button>
+  <script>initMap();</script>
+
 </body>
 </html>

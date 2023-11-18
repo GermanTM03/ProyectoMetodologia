@@ -20,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $ubicacion = $_POST["ubicacion"];
         $propietario = $_POST["propietario"];
         $descripcion = $_POST["descripcion"];
+        $latitud = $_POST["latitud"]; // Obtener la latitud del formulario
+        $longitud = $_POST["longitud"]; // Obtener la longitud del formulario
 
         // Conexión a la base de datos (usando PDO)
         require_once('../includes/conexion.php'); // Asegúrate de incluir tu archivo de parámetros
@@ -33,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($datos_existentes) {
             // Si ya existen datos, actualiza los existentes
-            $sql_actualizar = "UPDATE datos_empresa SET nombre_comercial = :nombre_comercial, correo_electronico = :correo_electronico, telefono = :telefono, ubicacion = :ubicacion, propietario = :propietario, descripcion = :descripcion WHERE registro_id = :registro_id";
+            $sql_actualizar = "UPDATE datos_empresa SET nombre_comercial = :nombre_comercial, correo_electronico = :correo_electronico, telefono = :telefono, ubicacion = :ubicacion, propietario = :propietario, descripcion = :descripcion, latitud = :latitud, longitud = :longitud WHERE registro_id = :registro_id";
             $stmt_actualizar = $conexion->prepare($sql_actualizar);
             $stmt_actualizar->bindParam(':nombre_comercial', $nombre_comercial);
             $stmt_actualizar->bindParam(':correo_electronico', $correo_electronico);
@@ -41,6 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt_actualizar->bindParam(':ubicacion', $ubicacion);
             $stmt_actualizar->bindParam(':propietario', $propietario);
             $stmt_actualizar->bindParam(':descripcion', $descripcion);
+            $stmt_actualizar->bindParam(':latitud', $latitud); // Vincular la latitud
+            $stmt_actualizar->bindParam(':longitud', $longitud); // Vincular la longitud
             $stmt_actualizar->bindParam(':registro_id', $registro_id);
 
             if ($stmt_actualizar->execute()) {
@@ -54,8 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         } else {
             // Si no existen datos, realiza una inserción
-            $sql_insertar = "INSERT INTO datos_empresa (registro_id, nombre_comercial, correo_electronico, telefono, ubicacion, propietario, descripcion)         
-            VALUES (:registro_id, :nombre_comercial, :correo_electronico, :telefono, :ubicacion, :propietario, :descripcion)";
+            $sql_insertar = "INSERT INTO datos_empresa (registro_id, nombre_comercial, correo_electronico, telefono, ubicacion, propietario, descripcion, latitud, longitud)         
+            VALUES (:registro_id, :nombre_comercial, :correo_electronico, :telefono, :ubicacion, :propietario, :descripcion, :latitud, :longitud)";
             $stmt_insertar = $conexion->prepare($sql_insertar);
             $stmt_insertar->bindParam(':registro_id', $registro_id);
             $stmt_insertar->bindParam(':nombre_comercial', $nombre_comercial);
@@ -64,6 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt_insertar->bindParam(':ubicacion', $ubicacion);
             $stmt_insertar->bindParam(':propietario', $propietario);
             $stmt_insertar->bindParam(':descripcion', $descripcion);
+            $stmt_insertar->bindParam(':latitud', $latitud); // Vincular la latitud
+            $stmt_insertar->bindParam(':longitud', $longitud); // Vincular la longitud
 
             if ($stmt_insertar->execute()) {
                 echo '<script type="text/javascript">
