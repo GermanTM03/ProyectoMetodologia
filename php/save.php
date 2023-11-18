@@ -24,8 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtConsulta->execute();
 
         if ($stmtConsulta->rowCount() > 0) {
-            echo "El correo electrónico ya está registrado.";
-            exit;
+            echo '<script type="text/javascript">
+            alert("El correo electrónico ya existe");
+            window.location.href = "../registro_empresa.php";
+            </script>';
+        exit;
         }
 
         // Si el correo no está registrado, proceder con la inserción
