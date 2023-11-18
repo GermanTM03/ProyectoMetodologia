@@ -7,7 +7,7 @@ try {
         $id = $_GET['id'];
 
         // Consulta SQL para seleccionar los campos especificados del lugar de interés con el ID proporcionado
-        $sql = "SELECT nombre, historia, coordenadas, imagen_url FROM LugaresInteres WHERE id = :id";
+        $sql = "SELECT nombre_comercial, descripcion, latitud, longitud, imagen FROM datos_empresa WHERE id = :id";
     
         // Preparar y ejecutar la consulta
         $stmt = $conexion->prepare($sql);
@@ -19,9 +19,9 @@ try {
 
         if ($row) {
             echo "<h1>Detalles del Lugar de Interés</h1>";
-            echo "<h2>Nombre: " . $row['nombre'] . "</h2>";
-            echo "<p>Historia: " . $row['historia'] . "</p>";
-            echo "<img src='" . $row['imagen_url'] . "' alt='Imagen del lugar'>";
+            echo "<h2>Nombre: " . $row['nombre_comercial'] . "</h2>";
+            echo "<p>Historia: " . $row['descripcion'] . "</p>";
+            echo "<img src='" . $row['imagen'] . "' alt='Imagen del lugar'>";
         } else {
             echo "No se encontraron resultados para el ID proporcionado.";
         }
@@ -40,11 +40,8 @@ try {
 
 <script>
     function initMap() {
-        var coordenadas = "<?= $row['coordenadas'] ?>"; // Obtener las coordenadas como una cadena
-        var coordenadasArray = coordenadas.split(', '); // Dividir las coordenadas en un array
-
-        var latitud = parseFloat(coordenadasArray[0]);
-        var longitud = parseFloat(coordenadasArray[1]);
+        var latitud = <?= $row['latitud'] ?>; // Obtener la latitud
+        var longitud = <?= $row['longitud'] ?>; // Obtener la longitud
 
         var coordenadas = { lat: latitud, lng: longitud };
 
@@ -62,4 +59,4 @@ try {
     }
 </script>
     
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCSGqr3iWtatierUX06POxHAWTByyl16s&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXgHRpfbWc77RiiA9ns4Wgo5Ea2SDSR0E&callback=initMap"></script>

@@ -7,7 +7,7 @@ try {
         $query = htmlspecialchars($_GET['query']); // Validar y limpiar el valor
 
         // Consulta SQL para seleccionar los elementos que coinciden con la consulta
-        $sql = "SELECT id, nombre, imagen_url FROM LugaresInteres WHERE nombre LIKE :query";
+        $sql = "SELECT id, nombre_comercial, imagen FROM datos_empresa WHERE nombre_comercial LIKE :query";
 
         // Preparar y ejecutar la consulta
         $stmt = $conexion->prepare($sql);
@@ -21,8 +21,8 @@ try {
         if (count($resultados) > 0) {
             echo "<ul>";
             foreach ($resultados as $row) {
-                $nombre = $row['nombre'];
-                $imagen_url = $row['imagen_url'];
+                $nombre = $row['nombre_comercial'];
+                $imagen_url = $row['imagen'];
                 $id = $row['id'];
 
                 // Agregar un enlace con el id del elemento
