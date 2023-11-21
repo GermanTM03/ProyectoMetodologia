@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Estados</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+    <header class="bar">
+        <a class="img" href="./index.html">
+            <img src="https://github.com/Darkseson12/Proyecto-R/blob/main/pymenfinder.png?raw=true" alt="pymenfinder">
+        </a>
+        <div class="box_nav">
+          
+                <a href="./empresalogin.html">¿Ya Estas Registrador?</a>
+        </div>
+    
+    </header>
+
+    <section class="box_form">
+
+        <div class="descripcion_registro">
+            <h2>Bienvenido  PYMEFINDER</h2>
+            <p>· Nuestra meta principal que se tiene en mente es hacer mas conocidas las empresas pequeñas mediante la aplicación web, ya que con ello podemos empezar poco a poco a nivel estatal a encontrar dichas empresas, tienditas o pequeños lugares de emprendimiento mediante una geolocalización que mostrara algún servicio cercano que requieras.</p>
+        </div>
+
+        <div class="formulario_registro">
+            <h2>Registro</h2>
+            <form action="./php/save.php" method="POST">
+                <input type="text" name="nombre" id="nombre" required placeholder="Propietario">
+            
+                <input type="email" name="email" id="email" required placeholder="Correo Electrónico">
+            
+                <input type="tel" name="tel" id="tel" required placeholder="Número de Teléfono">
+            
+                <input type="password" name="password" id="password" required placeholder="Contraseña">
+            
+                <input type="password" name="confirm_password" id="confirm_password" required placeholder="Repetir Contraseña">
+            
+                <input id="boton_registro" type="submit" value="Enviar">
+            </form>
+            
+        </div>
+        
+        
+    </section>
+    
+    
+
+</body>
+</html>
