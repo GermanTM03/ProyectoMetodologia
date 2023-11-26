@@ -34,11 +34,94 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos de la Empresa</title>
     <link rel="stylesheet" href="./css/StylesForm.css">
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXgHRpfbWc77RiiA9ns4Wgo5Ea2SDSR0E"></script>
   <script src="./JavaScript/maps.js"></script>
 </head>
 <body>
-    <h1>Formulario - Datos de la Empresa</h1>
+<header class="bar">
+        <a class="img" href="./index.html">
+        </a>
+        <div class="box_nav">
+          
+        </div>
+    
+    </header>
+
+
+
+
+<div class="cerrar_sesion">
+
+<h2>Bienvenido</h2>
+
+<form action="./php/logout.php" method="POST">
+    <input type="submit" name="cerrar_sesion" value="Cerrar Sesión">
+</form>
+</div>
+
+</div>
+
+
+
+<section class="Perfil_Empresa">
+    
+    <div class="Perfil_Datos">
+
+
+        <div class="Imagen_Perfil">
+        <?php
+    if (!empty($datos_actuales['imagen'])) {
+        echo '<img class="imagen-perfil" src="data:image/*;base64,' . base64_encode($datos_actuales['imagen']) . '" alt="Imagen actual">';
+    } else {
+        echo '<p>No hay imagen disponible</p>';
+    }
+    ?>
+        </div>
+
+        <div class="Datos_Perfil">
+            
+        <h2>
+        <?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>
+        </h2>
+        <form action="./php/Modificar_foto.php" method="post" enctype="multipart/form-data">
+        <div class="Botones_perfil">
+    <label for="nueva_imagen" class="input-file-label">
+        <input type="file" name="nueva_imagen" id="nueva_imagen" accept="image/*" class="input-file">
+        Seleccionar foto
+    </label>
+    <input type="submit" value="Guardar" class="submit-button">
+</div>
+
+         </form>
+
+        </div>
+
+
+    </div>
+
+    
+    <div class="Imagenes_E">  
+        <h3>Descripcion</h3>
+
+    <form action="./php/Descripcion.php" method="POST" enctype="multipart/form-data">
+
+        <textarea name="descripcion" id="descripcion" required><?php echo isset($datos_actuales['descripcion']) ? $datos_actuales['descripcion'] : ''; ?></textarea><br><br>
+        <input type="submit" value="Guardar">
+
+        </form>
+    </div>
+</section>
+
+
+
+
+
+
+
+<div class="box_empresa">
+
+
     <form action="./php/modifica_empresa.php" method="POST" enctype="multipart/form-data">
         <label for="nombre_comercial">Nombre Comercial</label>
         <input type="text" name="nombre_comercial" id="nombre_comercial" required value="<?php echo isset($datos_actuales['nombre_comercial']) ? $datos_actuales['nombre_comercial'] : ''; ?>"><br><br>
@@ -54,26 +137,20 @@ try {
     
         <label for="propietario">Propietario</label>
         <input type="text" name="propietario" id="propietario" required value="<?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>"><br><br>
-    
-        <label for="descripcion">Descripción</label>
-        <textarea name="descripcion" id="descripcion" required><?php echo isset($datos_actuales['descripcion']) ? $datos_actuales['descripcion'] : ''; ?></textarea><br><br>
-    
-        <!-- Input para el archivo de imagen -->
-        <label for="imagen">Imagen</label>
-        <input type="file" name="imagen" id="imagen"><br><br>
-    
-        <input type="hidden" id="lat" name="latitud" readonly>
-<input type="hidden" id="lng" name="longitud" readonly>
 
+  
+        <input type="hidden" id="lat" name="latitud" readonly>
+    <input type="hidden" id="lng" name="longitud" readonly>
+    
     
         <input type="submit" value="Enviar">
     </form>
 
+</div>
 
-            <!-- HTML del botón destructor -->
-<form action="./php/logout.php" method="POST">
-    <input type="submit" name="cerrar_sesion" value="Cerrar Sesión">
-</form>
+
+
+
 
 <div id="map" style="height: 400px; width: 50%;"></div>
 

@@ -71,3 +71,5 @@ function centerMapToUserLocation() {
     console.error('Error: Your browser doesn\'t support geolocation.');
   }
 }
+/* Algo mas */
+

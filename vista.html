@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="./css/StylesForm.css">
+
 
     <title>Document</title>
 </head>
@@ -21,16 +23,43 @@
      
 </div>
 </header>
-<script src="./JavaScript/funciones.js"></script>
-<div id="results-container"></div>
 
 
-<div id="results-container"></div>
-<div>
-    <h1>
-        hola
-    </h1>
-    <a href="./empresalogin.html">Login</a>
-</div>   
+<div class="box_empresa">
+
+
+    <form action="./php/modifica_empresa.php" method="POST" enctype="multipart/form-data">
+        <label for="nombre_comercial">Nombre Comercial</label>
+        <input type="text" name="nombre_comercial" id="nombre_comercial" required value="<?php echo isset($datos_actuales['nombre_comercial']) ? $datos_actuales['nombre_comercial'] : ''; ?>"><br><br>
+    
+        <label for="correo_electronico">Correo Electrónico</label>
+        <input type="email" name="correo_electronico" id="correo_electronico" required value="<?php echo isset($datos_actuales['correo_electronico']) ? $datos_actuales['correo_electronico'] : ''; ?>"><br><br>
+    
+        <label for="telefono">Número de Teléfono</label>
+        <input type="tel" name="telefono" id="telefono" required value="<?php echo isset($datos_actuales['telefono']) ? $datos_actuales['telefono'] : ''; ?>"><br><br>
+    
+        <label for="ubicacion">Ubicación</label>
+        <input type="text" name="ubicacion" id="ubicacion" required value="<?php echo isset($datos_actuales['ubicacion']) ? $datos_actuales['ubicacion'] : ''; ?>"><br><br>
+    
+        <label for="propietario">Propietario</label>
+        <input type="text" name="propietario" id="propietario" required value="<?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>"><br><br>
+    
+
+  
+        <input type="hidden" id="lat" name="latitud" readonly>
+    <input type="hidden" id="lng" name="longitud" readonly>
+    
+    
+        <input type="submit" value="Enviar">
+    </form>
+
+
+    <form action="">
+        <label for="descripcion">Descripción</label>
+        <textarea name="descripcion" id="descripcion" required><?php echo isset($datos_actuales['descripcion']) ? $datos_actuales['descripcion'] : ''; ?></textarea><br><br>
+    
+    </form>
+</div>
+
 </body>
 </html>

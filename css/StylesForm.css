@@ -17,3 +17,124 @@
   .custom-select input[type="checkbox"] {
     margin-right: 5px;
   }
+
+/* Estilos para el contenedor imagen1 */
+
+
+
+
+.Perfil_Empresa{
+  width: 100%;
+  height: 300px;
+  display: flex;
+}
+.Perfil_Datos{
+  width: 50%;
+  height: 80%;
+  display: flex;
+}
+.Imagen_Perfil{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Imagen_Perfil img{
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  border: solid 2px black;
+
+}
+.Datos_Perfil{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+.Datos_Perfil h2{
+  margin-top: 20%;
+  font-size: 30px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Botones_perfil{
+  width: 100%;
+  display: flex;
+}
+
+
+/* Estilos para el contenedor de los botones */
+.Botones_perfil {
+    display: flex; /* Alinear elementos en fila */
+    align-items: center; /* Alinear verticalmente al centro */
+}
+
+/* Estilo para ocultar el input file */
+.input-file {
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+/* Estilo para el label que actúa como botón de selección */
+.input-file-label {
+    position: relative;
+    padding: 8px 12px; /* Ajusta el padding según el diseño */
+    background-color: #ffffff; /* Color de fondo del botón */
+    border: 2px solid #000000; /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+margin-left: 10%;
+}
+
+/* Estilo opcional para el botón de selección de archivo al pasar el cursor */
+.input-file-label:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo para el botón de submit */
+.submit-button {
+font-size: 14px;
+padding: 10px;
+  background-color: #ffffff; /* Color de fondo del botón */
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: solid 2px black;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    margin-left: 10%;
+
+}
+.submit-button:hover{
+  background-color: rgba(110, 110, 110, 0.714);
+  cursor: pointer;
+  
+}
+
+/* Descripcion */
+.Imagenes_E{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+.Imagenes_E textarea{
+  width: 80%;
+  height: 150px;
+  font-size: 14px;
+  background-color: #000000b5;
+  color: wheat;
+  border-radius: 10px;
+  text-align: center;
+  resize: none;
+  border: none;
+}
+.Imagenes_E input{
+  width: 30%;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.811);
+  color: white;
+}
