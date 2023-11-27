@@ -1,0 +1,143 @@
+body{
+    background-color: #FDECC5;
+    margin: 0
+    ;
+}
+.Header{
+    background-color: #FACC5F;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+}
+.Header a{
+    width: 30%;
+    margin-left: 3%;
+    height: 100%;
+    display: flex;
+}
+.Header img{
+    width: 100%;
+}
+.opciones{
+width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
+
+}
+.opciones a{
+    width: 50%;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.opciones a:hover{
+    color: saddlebrown;
+    height: 60%;
+    cursor: pointer;
+    border-bottom: solid 2px saddlebrown;
+}
+#back{
+    border-left: solid 6px black;
+    margin-left: -2%;
+}
+#btn{
+    border-right: solid 6px black;
+}
+
+
+/* contenido */
+
+.contenedor_detalles{
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    margin-top: 5%;
+}
+.box_uno{
+    width: 40%;
+    height: 100%;
+    
+}
+
+.box_dos{
+    width: 60%;
+    height: 100%;
+}
+
+/* Imagen e info de contacto */
+.imagen_contenido{
+    width: 100%;
+    height: 50%;
+}
+.imagen_contenido img{
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    margin: 5%;
+    border: solid 2px black;
+}
+.Info_box{
+    width: 80%;
+    height: 40%;
+    margin: 5% 5% 10% 10%;
+    background-color: #FACC5F;
+    border-radius: 10px;
+    border: solid 2px black;
+    display: flex;
+    
+}
+.Telefono_box,.Correo_box,.Ubi_box{
+    width: 33.333%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+.Ubi_box i{
+    margin-top: 20%;
+width: 22%;
+height: 13%;
+padding: 10px;
+border-radius: 20px;
+ background-color: saddlebrown;
+}
+.Correo_box i{
+    margin-top: 20%;
+width: 22%;
+height: 13%;
+padding: 10px;
+border-radius: 20px;
+ background-color: saddlebrown;
+}
+.Telefono_box i{
+    margin-top: 20%;
+width: 22%;
+height: 13%;
+padding: 10px;
+border-radius: 20px;
+ background-color: saddlebrown;
+}
+
+/* Des y maps */
+.texto{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    border-left: solid 4px black;
+}
+.texto p{
+    margin-top: 10%;
+    
+}
+.mapa{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+

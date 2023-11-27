@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         } else {
             // Si no existen datos, muestra un mensaje de error
-            echo "No se encontraron datos de empresa para actualizar la descripción.";
+            echo "No se encontraron datos de empresa para actualizar la ahora.";
         }
     } catch (PDOException $ex) {
         echo "Error al almacenar los datos en la base de datos: " . $ex->getMessage();

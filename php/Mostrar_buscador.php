@@ -47,11 +47,7 @@ try {
         $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if (count($resultados) > 0) {
-            echo "<div class='Resultado_Buscar'>";
-
-            echo "<h1> $lugar</h1>";
-            echo "</div>";
-
+            echo "<h1>Resultados para: $lugar</h1>";
             foreach ($resultados as $row) {
                 $nombre = $row['nombre_comercial'];
                 $imagen = $row['imagen'];

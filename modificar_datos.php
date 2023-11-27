@@ -34,18 +34,18 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos de la Empresa</title>
     <link rel="stylesheet" href="./css/StylesForm.css">
-
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXgHRpfbWc77RiiA9ns4Wgo5Ea2SDSR0E"></script>
   <script src="./JavaScript/maps.js"></script>
 </head>
 <body>
 <header class="bar">
         <a class="img" href="./index.html">
+            <img src="https://github.com/Darkseson12/Proyecto-R/blob/main/pymenfinder.png?raw=true" alt="pymenfinder">
         </a>
         <div class="box_nav">
-          
+            
         </div>
-    
     </header>
 
 
@@ -54,10 +54,15 @@ try {
 <div class="cerrar_sesion">
 
 <h2>Bienvenido</h2>
+<h2>
+        <?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>
+        </h2>
+        <div class="salir_btn">
 
-<form action="./php/logout.php" method="POST">
-    <input type="submit" name="cerrar_sesion" value="Cerrar Sesión">
-</form>
+            <form action="./php/logout.php" method="POST">
+                <input id="Salir_perfil" type="submit" name="cerrar_sesion" value="Cerrar Sesión">
+            </form>
+        </div>
 </div>
 
 </div>
@@ -82,7 +87,7 @@ try {
         <div class="Datos_Perfil">
             
         <h2>
-        <?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>
+        <?php echo isset($datos_actuales['nombre_comercial']) ? $datos_actuales['nombre_comercial'] : ''; ?>
         </h2>
         <form action="./php/Modificar_foto.php" method="post" enctype="multipart/form-data">
         <div class="Botones_perfil">
@@ -107,10 +112,47 @@ try {
     <form action="./php/Descripcion.php" method="POST" enctype="multipart/form-data">
 
         <textarea name="descripcion" id="descripcion" required><?php echo isset($datos_actuales['descripcion']) ? $datos_actuales['descripcion'] : ''; ?></textarea><br><br>
-        <input type="submit" value="Guardar">
+        <input  type="submit" value="Guardar">
 
         </form>
     </div>
+</section>
+
+
+<section class="Datos_Lugar">
+
+<div class="Datos_Form">
+    <div class="Form_box">
+    <h2>Tus Datos A Mostrar</h2>
+
+    <form action="./php/modifica_empresa.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="nombre_comercial" id="nombre_comercial" placeholder="Nombre Comercial" required value="<?php echo isset($datos_actuales['nombre_comercial']) ? $datos_actuales['nombre_comercial'] : ''; ?>"><br><br>
+        
+            <input type="email" name="correo_electronico" id="correo_electronico" placeholder="Correo Electronico" required value="<?php echo isset($datos_actuales['correo_electronico']) ? $datos_actuales['correo_electronico'] : ''; ?>"><br><br>
+        
+            <input type="tel" name="telefono" id="telefono"  placeholder="Telefono Del Local" required value="<?php echo isset($datos_actuales['telefono']) ? $datos_actuales['telefono'] : ''; ?>"><br><br>
+        
+            <input type="text" name="ubicacion" id="ubicacion"  placeholder="Donde Se Ubica" required value="<?php echo isset($datos_actuales['ubicacion']) ? $datos_actuales['ubicacion'] : ''; ?>"><br><br>
+        
+            <input type="text" name="propietario" id="propietario"  placeholder="Propietario" required value="<?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>"><br><br>
+    
+         <input type="hidden" id="lat" name="latitud" readonly>
+        <input type="hidden" id="lng" name="longitud" readonly>
+        
+        
+            <input id="Boton_Datos" type="submit" value="Guardar">
+        </form>
+</div>
+</div>
+
+<div class="Maps_Lugar">
+<div id="map" style="height: 350px; width: 100%;"></div>
+
+  <button id="BTN_MAPS" onclick="centerMapToUserLocation()">Mi Ubicación</button>
+ 
+</div>
+
+
 </section>
 
 
@@ -119,42 +161,12 @@ try {
 
 
 
-<div class="box_empresa">
-
-
-    <form action="./php/modifica_empresa.php" method="POST" enctype="multipart/form-data">
-        <label for="nombre_comercial">Nombre Comercial</label>
-        <input type="text" name="nombre_comercial" id="nombre_comercial" required value="<?php echo isset($datos_actuales['nombre_comercial']) ? $datos_actuales['nombre_comercial'] : ''; ?>"><br><br>
-    
-        <label for="correo_electronico">Correo Electrónico</label>
-        <input type="email" name="correo_electronico" id="correo_electronico" required value="<?php echo isset($datos_actuales['correo_electronico']) ? $datos_actuales['correo_electronico'] : ''; ?>"><br><br>
-    
-        <label for="telefono">Número de Teléfono</label>
-        <input type="tel" name="telefono" id="telefono" required value="<?php echo isset($datos_actuales['telefono']) ? $datos_actuales['telefono'] : ''; ?>"><br><br>
-    
-        <label for="ubicacion">Ubicación</label>
-        <input type="text" name="ubicacion" id="ubicacion" required value="<?php echo isset($datos_actuales['ubicacion']) ? $datos_actuales['ubicacion'] : ''; ?>"><br><br>
-    
-        <label for="propietario">Propietario</label>
-        <input type="text" name="propietario" id="propietario" required value="<?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>"><br><br>
-
-  
-        <input type="hidden" id="lat" name="latitud" readonly>
-    <input type="hidden" id="lng" name="longitud" readonly>
-    
-    
-        <input type="submit" value="Enviar">
-    </form>
-
-</div>
 
 
 
 
 
-<div id="map" style="height: 400px; width: 50%;"></div>
 
-  <button onclick="centerMapToUserLocation()">Mi Ubicación</button>
   <script>initMap();</script>
 
 </body>

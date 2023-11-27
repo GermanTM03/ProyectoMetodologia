@@ -2,6 +2,35 @@
     display: none; 
   }
 
+.cerrar_sesion{
+  width: 100%;
+  background-color: #FACC5F;
+  display: flex;
+  align-items: center;
+}
+.cerrar_sesion h2{
+  margin-left: 5%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.salir_btn{
+  width: 50%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Salir_perfil{
+  margin-left: 100%;
+  background-color:rgba(245, 222, 179, 0) ;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 20px;
+}
+#Salir_perfil:hover{
+  color: #ffffff;
+  background-color: saddlebrown;
+  cursor: pointer;
+}
 
 
   .custom-select {
@@ -125,7 +154,7 @@ padding: 10px;
   height: 150px;
   font-size: 14px;
   background-color: #000000b5;
-  color: wheat;
+  color: rgb(255, 255, 255);
   border-radius: 10px;
   text-align: center;
   resize: none;
@@ -137,4 +166,89 @@ padding: 10px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.811);
   color: white;
+}
+.Imagenes_E input:hover{
+  background-color: saddlebrown;
+  color: white;
+  cursor: pointer;
+}
+
+/* Formulario y maps */
+
+.Datos_Lugar{
+  width: 100%;
+  height: 80vh;
+display: flex;
+}
+.Datos_Form{
+width: 50%;
+display: flex;
+justify-content: center;
+}
+.Form_box{
+  border: solid 2px black;
+  width: 80%;
+  height: 90%;
+  margin-top: -5%;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #FACC5F;
+
+}
+    /* Estilos para los labels dentro de los inputs */
+    .Form_box input[type="text"]:focus::placeholder,
+    input[type="email"]:focus::placeholder,
+    input[type="tel"]:focus::placeholder,
+    input[type="password"]:focus::placeholder {
+        transition: all 0.3s ease-out;
+        transform: translateY(-20px);
+        font-size: 0.8em;
+        color: #999;
+    }
+
+    /* Estilos para los labels dentro de los inputs cuando están llenos */
+    .Form_box input[type="text"]:valid::placeholder,
+    input[type="email"]:valid::placeholder,
+    input[type="tel"]:valid::placeholder,
+    input[type="password"]:valid::placeholder {
+        font-size: 0.8em;
+        transform: translateY(-20px);
+    }
+
+    /* Estilos para los inputs */
+    .Form_box input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        margin: 0% 5% 0% 5%;
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+    }
+#Boton_Datos{
+  width: 40%;
+  font-size: 20px;
+  border-radius: 10px;
+} 
+#Boton_Datos:hover{
+  background-color: saddlebrown;
+  cursor: pointer;
+  color: white;
+}
+
+.Maps_Lugar{
+  width: 50%;
+  text-align: center;
+}
+
+#BTN_MAPS{
+  font-size: 20px;
+  background-color: #99999900;
+  border-radius: 10px;
+}
+#BTN_MAPS:hover{
+  background-color: saddlebrown;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }

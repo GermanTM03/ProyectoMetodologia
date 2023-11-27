@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+}
+
+
+.Bar_Buscador{
+    background-color: #FACC5F;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+}
+.Bar_Buscador a{
+    width: 30%;
+    margin-left: 3%;
+    height: 100%;
+    display: flex;
+}
+.Bar_Buscador img{
+    width: 100%;
+}
+.Buscador_Text{
+    width: 40%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+.Buscador_Text input{
+    width: 70%;
+    height: 30%;
+}
+.boton_buscar {
+background-color: rgba(255, 255, 255, 0.646);
+height: 40%;
+border-radius: 5px;
+width: 10%;
+display: flex;
+
+}
+.boton_buscar a{
+    width: 100%;
+    text-decoration: none;
+    align-items: center;
+    margin-left: 15%;
+    color: black;
+
+}
+.boton_buscar:hover{
+    background-color: saddlebrown;
+    cursor: pointer;
+    color: white;
+}
+.boton_buscar a:hover{
+    background-color: saddlebrown;
+    cursor: pointer;
+    color: white;
+}
+
+/* resultado */
+.Resultado_Buscar{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Contenedor */
+
+.Contenido_resultado{
+    display: flex;
+    background-color: red;
+    width: 100%;
+    height: auto;
+}
+
+   /* Agrega estilos para mostrar los resultados en línea */
+.Box_Contenido {
+    display: inline-block;
+    vertical-align: top; /* Alinear al inicio */
+}
+
+/* Puedes ajustar estos estilos según sea necesario */
+.Box_Contenido h2 {
+    margin-bottom: 5px;
+    color: white;
+    margin: 10% 10% 15% 10%;
+}
+
+.imagen-perfil {
+    width: 100px; /* Ajusta el ancho de la imagen según tu diseño */
+    height: auto;
+}
+/* Resultados */
+
+.Box_Contenido{
+    margin-left: 3%;
+    background-color: #FACC5F;
+    width: 15%;
+    height: 200px;
+    background-size: cover; /* Ajusta el tamaño para cubrir completamente */
+    text-align: center;
+}
+.Box_Contenido a{
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.Box_Contenido a:hover{
+    color: #FACC5F;
+    cursor: pointer;
+    border-bottom: solid 2px   rgb(187, 144, 114);
+}
+.Box_ContenidoF{
+    background-color: #0000009a;
+    width: 100%;
+    height: 100%;
+    margin-top: -9%;
+
+
+}
+
+
