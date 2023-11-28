@@ -109,10 +109,18 @@ try {
     <div class="Imagenes_E">  
         <h3>Descripcion</h3>
 
-    <form action="./php/Descripcion.php" method="POST" enctype="multipart/form-data">
+        <form action="./php/Descripcion.php" method="POST" enctype="multipart/form-data">
 
         <textarea name="descripcion" id="descripcion" required><?php echo isset($datos_actuales['descripcion']) ? $datos_actuales['descripcion'] : ''; ?></textarea><br><br>
         <input  type="submit" value="Guardar">
+        <input type="text" name="nombre_comercial" style="display:none;" id="nombre_comercial" placeholder="Nombre Comercial"  value="<?php echo isset($datos_actuales['nombre_comercial']) ? $datos_actuales['nombre_comercial'] : ''; ?>"><br><br>
+
+        <input type="email" name="correo_electronico" style="display:none;" id="correo_electronico" placeholder="Correo Electronico" value="<?php echo isset($datos_actuales['correo_electronico']) ? $datos_actuales['correo_electronico'] : ''; ?>"><br><br>
+        
+        <input type="tel" name="telefono" id="telefono" style="display:none;" placeholder="Telefono Del Local"  value="<?php echo isset($datos_actuales['telefono']) ? $datos_actuales['telefono'] : ''; ?>"><br><br>
+    
+        <input type="text" name="ubicacion" id="ubicacion" style="display:none;" placeholder="Donde Se Ubica"  value="<?php echo isset($datos_actuales['ubicacion']) ? $datos_actuales['ubicacion'] : ''; ?>"><br><br>
+    
 
         </form>
     </div>
@@ -133,11 +141,12 @@ try {
             <input type="tel" name="telefono" id="telefono"  placeholder="Telefono Del Local" required value="<?php echo isset($datos_actuales['telefono']) ? $datos_actuales['telefono'] : ''; ?>"><br><br>
         
             <input type="text" name="ubicacion" id="ubicacion"  placeholder="Donde Se Ubica" required value="<?php echo isset($datos_actuales['ubicacion']) ? $datos_actuales['ubicacion'] : ''; ?>"><br><br>
-        
+           
             <input type="text" name="propietario" id="propietario"  placeholder="Propietario" required value="<?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>"><br><br>
-    
-         <input type="hidden" id="lat" name="latitud" readonly>
-        <input type="hidden" id="lng" name="longitud" readonly>
+            <textarea name="descripcion" id="descripcion" style="display:none;" ><?php echo isset($datos_actuales['descripcion']) ? $datos_actuales['descripcion'] : ''; ?></textarea><br><br>
+
+         <input  id="lat" name="latitud" readonly value="21.1619" style="display:none;">
+        <input  id="lng" name="longitud" readonly value="-86.8515" style="display:none;">
         
         
             <input id="Boton_Datos" type="submit" value="Guardar">

@@ -141,3 +141,7 @@ border-radius: 20px;
     
 }
 
+/* NO BORRAR */
+#lat,#lng input{
+    background-color: red;
+}
