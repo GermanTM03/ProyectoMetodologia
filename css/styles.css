@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #FDECC5;
 }
 .opciones_ocultas {
     width: 100%;
@@ -98,7 +98,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 4%;
+    margin-top: 1%;
 }
 .categoria{
     width: 20%;
@@ -123,6 +123,15 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: auto;
 
 }
+.Cat{
+    width: 100%;
+    
+    }
+    .Cat h2{
+        margin-left: 5%;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
 
 
 /* Registro */
@@ -130,19 +139,20 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .box_form{
     width: 100%;
     height: 90vh;
-    background-color: rgb(255, 255, 255);
+    background-image: url(https://github.com/Darkseson12/Proyecto-R/blob/main/lakeisha-bennett-nf37cy51Bo8-unsplash.jpg?raw=true);
     display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
 }
-.descripcion_registro{
-    width: 40%;
-    height: 80%;
-    margin: 4%;
-    background-color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.676);
-    color: white;
-    border-radius: 10%;
-    
+.box_form1{
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.777);
+    display: flex;
+    justify-content: center;
 }
+
 .descripcion_registro h2{
     margin-top: 20%;
 }
@@ -155,9 +165,9 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .formulario_registro{
-    background-color:#FACC5F;
-    width: 40%;
-    height: 80%;
+    background-color:#B28264;
+    width: 30%;
+    height: 70%;
     margin: 4%;
     border: solid 3px black;
     border-radius: 10%;
@@ -218,19 +228,52 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     /* login */
     .box_login{
-        margin-top: 2%;
+        margin-top: -5%;
         width: 100%;
         height: 100vh;
         display: flex;
         text-align: center;
     }
-
-    .img_login{
-        background-color: rgb(20, 0, 94);
-        width: 50%;
-        height: 100%;
-        margin-left: 10%;
+    .Saludo{
+        width: 100%;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 40px;
     }
+    #Login_boton{
+margin: 5%;        background-color: #FACC5F;
+        width: 34%;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+    #Login_boton:hover{
+        background-color: saddlebrown;
+        cursor: pointer;
+        color: white;
+    }
+
+    .img_login {
+        width: 50%;
+        height: 30%;
+        margin-left: 10%;
+        margin-top: 12%;
+        font-size: 20px;
+        border-left: solid 2px black;
+        display: flex;
+        text-align: justify;
+        text-align-last:left; /* Alinea el último renglón a la izquierda */
+    }
+    .img_login p{
+        width: 100%;
+        height: 30%;
+        margin-left: 3%;
+        font-size: 20px;
+        display: flex;
+        text-align: justify;
+        text-align-last:left; /* Alinea el último renglón a la izquierda */
+    }
+    
+   
 
     .form_login{
         width: 40%;
@@ -238,7 +281,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         height: 50%;
         border-radius: 10px;
         border: solid 3px black;
-        background-color: #FACC5F;
+        background-color: #B28264;
     }
     .form_login input[type="email"]:focus::placeholder,
     input[type="password"]:valid::placeholder {

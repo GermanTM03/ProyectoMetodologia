@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    background-color: #FDECC5;
+
 }
 
 
@@ -75,6 +77,7 @@ display: flex;
 .Box_Contenido {
     display: inline-block;
     vertical-align: top; /* Alinear al inicio */
+    margin-top: 2%;
 }
 
 /* Puedes ajustar estos estilos según sea necesario */
@@ -91,7 +94,7 @@ display: flex;
 /* Resultados */
 
 .Box_Contenido{
-    margin-left: 3%;
+    margin-left: 6%;
     background-color: #FACC5F;
     width: 15%;
     height: 200px;

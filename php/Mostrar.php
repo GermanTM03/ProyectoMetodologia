@@ -11,13 +11,16 @@
         <a class="img" href="../index.html">
             <img src="https://github.com/Darkseson12/Proyecto-R/blob/main/pymenfinder.png?raw=true" alt="pymenfinder">
         </a>
-        <div class="Buscador_Text">
-        <input id="bucaid" type="text">
-        <div class="boton_buscar">
-            <a href="#" id="mostrarMas">Buscar</a>
-
-        </div>
+       
+       <div class="Buscador_Text">
+    <input id="bucaid" type="text">
+    <div class="sugerencias"></div>
+    <div class="boton_buscar">
+        <a href="#" id="mostrarMas">Buscar</a>
     </div>
+</div>
+
+
     </header>
 
     <div class="Respuesta">
@@ -49,7 +52,7 @@ try {
         if (count($resultados) > 0) {
             echo "<div class='Resultado_Buscar'>";
 
-            echo "<h1> $lugar</h1>";
+            echo "<h1> '$lugar'</h1>";
             echo "</div>";
 
             foreach ($resultados as $row) {

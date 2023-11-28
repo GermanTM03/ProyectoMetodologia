@@ -58,25 +58,34 @@ try {
                     <p>No se encontró ninguna imagen para este lugar de interés.</p>
                 <?php endif; ?>
             </div>
-            <div class="Info_box">
+
+            <div class="Box_Contacto">
+
+                <div class="Contacto_Tx">
+                    
+                    <h2>Contacto</h2>
+                </div>
+                <div class="Info_box">
+                    
                 <div class="Telefono_box">
 
-                <i class="fa-solid fa-phone fa-2x"  style="color: #ffffff;"></i>
+                    <i class="fa-solid fa-phone fa-2x"  style="color: #ffffff;"></i>
                     <p><?= $row['telefono'] ?></p>
                 </div>
-
+                
                 <div class="Correo_box">
-
+                    
                     <i class="fa-solid fa-envelope fa-2x" style="color: #fcfcfc;"></i> <!-- Cuádruple del tamaño original -->
                     <p><?= $row['correo_electronico'] ?></p>
-    
+                    
                 </div>
-
-<div class="Ubi_box">
-<i class="fa-solid fa-location-dot fa-2x" style="color: #ffffff;"></i>
-    <p> <?= $row['ubicacion'] ?></p>
-</div>
-
+                
+                <div class="Ubi_box">
+                    <i class="fa-solid fa-location-dot fa-2x" style="color: #ffffff;"></i>
+                    <p> <?= $row['ubicacion'] ?></p>
+                </div>
+                
+            </div>
             </div>
         </div>
 <div class="box_dos">
