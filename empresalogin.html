@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio De Sesion</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/LOGOPAGE.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/fooder.css">
+
 
 </head>
 <body>
@@ -21,18 +24,20 @@
     </header>
 
 
-
+<section class="Saludos">
+<h2>HOLAMUNDO</h2>
+</section>
     <div class="Saludo">
         <h2>Bienvenido a PYMEFINDER</h2>
     </div>
     <section class="box_login">
-<div class="img_login">
+<div class="img_login" id="img_login">
 <p>
     Nuestra meta principal que se tiene en mente es hacer mas conocidas las empresas pequeñas mediante la aplicación web, ya que con ello podemos empezar poco a poco a nivel estatal a encontrar dichas empresas, tienditas o pequeños lugares de emprendimiento mediante una geolocalización que mostrara algún servicio cercano que requieras.
 </p>
 </div>
 
-<div class="form_login">
+<div class="form_login" id="form_login">
     
             <h2>Inicia Sesion</h2>
             <form action="./php/login.php" method="POST">
@@ -53,7 +58,7 @@
                   </svg>
                 <input type="password" name="password" id="password" required placeholder="Contraseña">
             </div>
-                <input id="Login_boton" type="submit" value="Iniciar Sesión">
+                <input id="Login_boton" type="submit" value="Iniciar ">
             </form>
             <a href="./registro_empresa.html">Aun No tienes Cuenta?</a>
 
@@ -63,6 +68,26 @@
     </section>
 
     
-
+    <footer class="footer">
+        <div class="container">
+            <div class="rights">
+                <p>Todos los derechos reservados © 2023</p>
+            </div>
+            <div class="university">
+                <p>Universidad Tecnológica de Cancún</p>
+            </div>
+            <div class="members">
+                <p>Integrantes:</p>
+                <ul>
+                    <li>Torres Matos German</li>
+                    <li>Hernández Córdova Yadira
+                    </li>
+                    <li> Vasquez Rodríguez Gabriel Jairo </li>
+                    <li>Mendez Torres Odalys</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>

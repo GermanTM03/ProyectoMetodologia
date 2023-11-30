@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados</title>
     <link rel="stylesheet" href="../css/detalles.css">
+    <link rel="shortcut icon" href="../assets/LOGOPAGE.png" type="image/x-icon">
+
 </head>
 <body>
 <header class="Bar_Buscador">

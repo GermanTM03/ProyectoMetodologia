@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Estados</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/fooder.css">
+    <link rel="shortcut icon" href="./assets/LOGOPAGE.png" type="image/x-icon">
 
 </head>
 <body>
@@ -18,14 +20,16 @@
         </div>
     
     </header>
-
-    <section class="box_form">
+    <section class="Saludos">
+        <h2></h2>
+        </section>
+    <section class="box_form" id="box_form">
 
    
         <div class="box_form1">
 
       
-        <div class="formulario_registro">
+        <div class="formulario_registro" id="formulario_registro">
             <h2>Registro</h2>
             <form action="./php/save.php" method="POST">
                 <input type="text" name="nombre" id="nombre" required placeholder="Propietario">
@@ -47,6 +51,26 @@
     </section>
     
     
-
+    <footer class="footer">
+        <div class="container">
+            <div class="rights">
+                <p>Todos los derechos reservados © 2023</p>
+            </div>
+            <div class="university">
+                <p>Universidad Tecnológica de Cancún</p>
+            </div>
+            <div class="members">
+                <p>Integrantes:</p>
+                <ul>
+                    <li>Torres Matos German</li>
+                    <li>Hernández Córdova Yadira
+                    </li>
+                    <li> Vasquez Rodríguez Gabriel Jairo </li>
+                    <li>Mendez Torres Odalys</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>

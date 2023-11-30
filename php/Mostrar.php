@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados</title>
     <link rel="stylesheet" href="../css/detalles.css">
+    <link rel="stylesheet" href="../css/fooder.css">
+
+    <link rel="shortcut icon" href="../assets/LOGOPAGE.png" type="image/x-icon">
+
 </head>
 <body>
 <header class="Bar_Buscador">
@@ -27,9 +31,8 @@
 
     </div>
 
-
-
-<?php
+    
+    <?php
 try {
     require_once('../includes/conexion.php');
 
@@ -50,28 +53,33 @@ try {
         $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if (count($resultados) > 0) {
-            echo "<div class='Resultado_Buscar'>";
-
-            echo "<h1> '$lugar'</h1>";
-            echo "</div>";
-
+?>
+            <div class='Resultado_Buscar'>
+                <h1><?php echo $lugar; ?></h1>
+            </div>
+            
+            <section class="MegaBox">
+<?php
             foreach ($resultados as $row) {
                 $nombre = $row['nombre_comercial'];
                 $imagen = $row['imagen'];
                 $id = $row['id'];
+?>
 
-                // Agregar un enlace con el id del elemento
-                echo "<div class='Box_Contenido' style='background-image: url(data:image/*;base64," . base64_encode($imagen) . ")'>";
-                echo "<div class='Box_ContenidoF'>";
-                echo "<h2>$lugar</h2>";
+                <div class='Box_Contenido' id="Box_Contenido" style='background-image: url(data:image/*;base64,<?php echo base64_encode($imagen); ?>)'>
+                    <div class='Box_ContenidoF'>
+                    <h2><?php echo $lugar; ?></h2>
 
-                echo "<h2>'$nombre'</h2>";
-                echo "<a href='./detalles.php?id=$id'>Ver detalles</a>";
-                echo "<br>";
-                echo "</div>";
-                echo "</div>";
-
+                        <h2>'<?php echo $nombre; ?>'</h2>
+                        <a href='./detalles.php?id=<?php echo $id; ?>'>Ver detalles</a>
+                        <br>
+                    </div>
+                </div>
+<?php
             }
+?>
+            </section>
+<?php
         } else {
             echo "No se encontraron resultados para $lugar.";
         }
@@ -82,7 +90,13 @@ try {
     echo "Error al consultar la base de datos: " . $ex->getMessage();
 }
 ?>
+
+
+
+
 <script src="../JavaScript/buscador_bar.js"></script>
    
+
+
 </body>
 </html>

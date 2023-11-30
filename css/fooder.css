@@ -1,0 +1,43 @@
+/* Estilos generales del footer */
+.footer {
+    background-color: #facb5f98;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Estilos para los derechos de autor */
+.rights p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Estilos para el nombre de la universidad */
+.university p {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilos para la lista de integrantes */
+.members p {
+    margin: 15px 0 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.members ul {
+    list-style: none;
+    padding: 0;
+}
+
+.members li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}

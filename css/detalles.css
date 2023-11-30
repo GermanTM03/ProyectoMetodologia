@@ -10,6 +10,11 @@ body{
     width: 100%;
     height: 10vh;
     display: flex;
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Lo coloca en la parte superior de la ventana */
+    left: 0;
+    transition: top 0.3s; /* Transición suave al desplazarse */
+
 }
 .Bar_Buscador a{
     width: 30%;
@@ -66,19 +71,73 @@ display: flex;
 }
 /* Contenedor */
 
-.Contenido_resultado{
-    display: flex;
-    background-color: red;
-    width: 100%;
-    height: auto;
-}
+
 
    /* Agrega estilos para mostrar los resultados en línea */
-.Box_Contenido {
-    display: inline-block;
-    vertical-align: top; /* Alinear al inicio */
-    margin-top: 2%;
+
+.MegaBox{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en el contenedor */
+
 }
+@media (max-width: 430px) {
+    .MegaBox{
+        width: 100%;
+        height: auto;
+    
+    }
+    #Box_Contenido{
+        background-color: #FACC5F;
+        width: 96%;
+        margin-left: 2%;
+        height: 200px;
+        background-size: cover; /* Ajusta el tamaño para cubrir completamente */
+        text-align: center;
+        font-size: 10px;
+    }
+    .Bar_Buscador a{
+        width: 40%;
+        margin-left: 3%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Bar_Buscador img{
+        width: 90%;
+        height: 60%;
+    }
+    .Buscador_Text{
+    width: 60%;
+    display: flex;
+    margin-left: -1%;
+    align-items: center;
+}
+.Buscador_Text input{
+    width: 60%;
+    height: 30%;
+}
+.boton_buscar {
+background-color: rgba(255, 255, 255, 0.646);
+height: 40%;
+border-radius: 5px;
+width: 40%;
+display: flex;
+
+}
+.boton_buscar a{
+    width: 100%;
+    text-decoration: none;
+    align-items: center;
+    margin-left: 15%;
+    color: black;
+
+}
+    
+}
+
 
 /* Puedes ajustar estos estilos según sea necesario */
 .Box_Contenido h2 {
@@ -95,6 +154,7 @@ display: flex;
 
 .Box_Contenido{
     margin-left: 6%;
+    margin-top: 3%;
     background-color: #FACC5F;
     width: 15%;
     height: 200px;

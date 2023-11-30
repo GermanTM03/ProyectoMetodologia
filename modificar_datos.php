@@ -35,8 +35,12 @@ try {
     <title>Datos de la Empresa</title>
     <link rel="stylesheet" href="./css/StylesForm.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/fooder.css">
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXgHRpfbWc77RiiA9ns4Wgo5Ea2SDSR0E"></script>
   <script src="./JavaScript/maps.js"></script>
+  <link rel="shortcut icon" href="./assets/LOGOPAGE.png" type="image/x-icon">
+
 </head>
 <body>
 <header class="bar">
@@ -53,7 +57,7 @@ try {
 
 <div class="cerrar_sesion">
 
-<h2>Bienvenido</h2>
+<h2>Hola:</h2>
 <h2>
         <?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>
         </h2>
@@ -145,8 +149,8 @@ try {
             <input type="text" name="propietario" id="propietario"  placeholder="Propietario" required value="<?php echo isset($datos_actuales['propietario']) ? $datos_actuales['propietario'] : ''; ?>"><br><br>
             <textarea name="descripcion" id="descripcion" style="display:none;" ><?php echo isset($datos_actuales['descripcion']) ? $datos_actuales['descripcion'] : ''; ?></textarea><br><br>
 
-         <input  id="lat" name="latitud" readonly value="21.1619" style="display:none;">
-        <input  id="lng" name="longitud" readonly value="-86.8515" style="display:none;">
+         <input  id="lat" name="latitud" readonly value="<?php echo isset($datos_actuales['latitud']) ? $datos_actuales['latitud'] : ''; ?>" style="display:none;">
+        <input  id="lng" name="longitud" readonly value="<?php echo isset($datos_actuales['longitud']) ? $datos_actuales['longitud'] : ''; ?>" style="display:none;">
         
         
             <input id="Boton_Datos" type="submit" value="Guardar">
@@ -177,6 +181,29 @@ try {
 
 
   <script>initMap();</script>
+  <script></script>
+
+
+  <footer class="footer">
+    <div class="container">
+        <div class="rights">
+            <p>Todos los derechos reservados © 2023</p>
+        </div>
+        <div class="university">
+            <p>Universidad Tecnológica de Cancún</p>
+        </div>
+        <div class="members">
+            <p>Integrantes:</p>
+            <ul>
+                <li>Torres Matos German</li>
+                <li>Hernández Córdova Yadira
+                </li>
+                <li> Vasquez Rodríguez Gabriel Jairo </li>
+                <li>Mendez Torres Odalys</li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
